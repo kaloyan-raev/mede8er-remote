@@ -1,0 +1,197 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <ImageButton
+        android:id="@+id/btnEnter"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_enter"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnUp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/btnEnter"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_up"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnRight"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/btnEnter"
+        android:src="@drawable/ic_right"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnDown"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/btnEnter"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_down"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnLeft"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btnEnter"
+        android:src="@drawable/ic_left"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/btnLeft"
+        android:layout_toLeftOf="@+id/btnLeft"
+        android:layout_marginRight="-8dp"
+        android:src="@drawable/ic_home"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnReturn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/btnRight"
+        android:layout_toRightOf="@+id/btnRight"
+        android:layout_marginLeft="-8dp"
+        android:src="@drawable/ic_return"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnInfo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/btnRight"
+        android:layout_toRightOf="@+id/btnRight"
+        android:layout_marginLeft="-8dp"
+        android:src="@drawable/ic_info"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/btnLeft"
+        android:layout_toLeftOf="@+id/btnLeft"
+        android:layout_marginRight="-8dp"
+        android:src="@drawable/ic_menu"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_above="@+id/btnUp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_play"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnStop"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/btnDown"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_stop"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnPrev"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignLeft="@+id/arrowsCircle"
+        android:layout_below="@+id/btnMenu"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/ic_prev"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignRight="@+id/arrowsCircle"
+        android:layout_below="@+id/btnInfo"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_next"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnReplay"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignLeft="@+id/arrowsCircle"
+        android:layout_above="@+id/btnHome"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="8dp"
+        android:src="@drawable/ic_replay"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+
+    <ImageButton
+        android:id="@+id/btnSkip"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignRight="@+id/arrowsCircle"
+        android:layout_above="@+id/btnReturn"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_skip"
+        style="@style/RemoteControlButton"
+        android:onClick="sendCommand" />
+    
+    <View
+        android:id="@+id/enterCircle"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle"
+        />
+    
+    <View
+        android:id="@+id/arrowsCircle"
+        android:layout_width="216dp"
+        android:layout_height="216dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle"
+        />
+    
+    <!--View
+        android:id="@+id/outerCircle"
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/circle"
+        /-->
+
+</RelativeLayout>

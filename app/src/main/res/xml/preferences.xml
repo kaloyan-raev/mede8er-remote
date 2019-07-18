@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="pref_ip"
+        android:title="@string/pref_ip"
+        android:defaultValue="@string/pref_ip_default" />
+    <CheckBoxPreference 
+        android:key="pref_vibrate"
+        android:title="@string/pref_vibrate"
+        android:defaultValue="true" />
+</PreferenceScreen>
